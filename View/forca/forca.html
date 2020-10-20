@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+    <h1>Forca</h1>
+
+    <div class="alert alert-primary">
+        <strong>%PREENCHIDO%</strong>
+    </div>
+
+    <div class="alert alert-warning">
+        <h4 class="alert-heading">Letras Já informadas</h4>
+        <p>%LETRASINFORMADAS%</p>
+    </div>
+
+    <br>
+
+    <div class="alert alert-danger">
+        <strong>Chances restantes: %QTD%</strong>
+    </div>
+
+    <form action="?p=forca&op=recebeletra" method="post">
+
+        <div class="form-group">
+          <label for="letra">letra</label>
+          <input type="text" name="letra" id="letra" class="form-control" placeholder="" aria-describedby="helpId" required autofocus>
+          <small id="helpId" class="text-muted">Informe Uma letra para preencher a palavra</small>
+        </div>
+       
+        <div style="display: flex;">
+            <button type="submit" class="btn btn-success" style="margin-right: 25px;">Tentar</button>
+            <button onclick="window.location.href='?p=forca&op=destroy'" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+</div>
